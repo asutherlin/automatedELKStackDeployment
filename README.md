@@ -9,7 +9,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
   - [install-elk.yml](install-elk.yml)
 
 This document contains the following details:
-- Description of the Topologycd
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -34,9 +34,9 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
 | Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Web-1    |          |            |                  |
+| Web-2    |          |            |                  |
+| ELKvm    |          |            |                  |
 
 ### Access Policies
 
