@@ -2,14 +2,14 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Red Team Cloud Training Network](Images/diagram_filename.png)
+![Red Team Cloud Training](Images/diagram_filename.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Read Team Cloud Training file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+  - install-elk.yml
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topologycd
 - Access Policies
 - ELK Configuration
   - Beats in Use
