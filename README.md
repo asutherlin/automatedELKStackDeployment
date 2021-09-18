@@ -7,7 +7,6 @@ The files in this repository were used to configure the network depicted below.
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the install-elk.yml file may be used to install only certain pieces of it, such as Filebeat.
 
   - [install-elk.yml](install-elk.yml)
-  - [install-dvwa.yml](dvwa-playbook.yml)
 
 This document contains the following details:
 - Description of the Topology
@@ -47,11 +46,13 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet.
 
-Only the Jump Box Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: 40.83.166.154
+Only the Jump Box Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: _45.26.149.89_
 
-Machines within the network can only be accessed by the DVWA Docker Container.
+
+Machines within the network can only be accessed by the DVWA Docker Container. 
+- [install-dvwa.yml](dvwa-playbook.yml)
 `- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_`
-
+The Jump Box Provisioner's IP is the only machine allowed to access the ELKvm: _40.83.166.154_
 
 A summary of the access policies in place can be found in the table below.
 
