@@ -28,6 +28,7 @@ The Jump Box Provisioner has the sole responsibility to provide updates on the s
 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
+
 [Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.](https://www.elastic.co/guide/en/beats/filebeat/current//filebeat-overview.html)
 
 [Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.](https://www.elastic.co/guide/en/beats/metricbeat/7.14/metricbeat-overview.html#:~:text=Metricbeat%20takes%20the%20metrics%20and,HAProxy)
@@ -35,12 +36,12 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.1.0.6   | Linux            |
-| Web-1    | Host     | 10.1.0.8   | Linux            |
-| Web-2    | Host     | 10.1.0.9   | Linux            |
-| ELKvm    | ELK Host | 10.0.0.4   | Linux            |
+| Name     | Function | IP Address       | Operating System |
+|----------|----------|------------------|------------------|
+| Jump Box | Gateway  | 40.83.166.154    | Linux            |
+| Web-1    | Host     | 10.1.0.8         | Linux            |
+| Web-2    | Host     | 10.1.0.9         | Linux            |
+| ELKvm    | ELK Host | 10.1.0.6         | Linux            |
 
 ### Access Policies
 
