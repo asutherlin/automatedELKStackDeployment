@@ -1,0 +1,10 @@
+---
+  - name: Config Web VM with Docker
+    hosts: webservers
+    become: true
+    tasks:
+    - name: docker.io
+      apt:
+        update_cache: yes
+        name: docker.io
+        state: absent
