@@ -61,5 +61,5 @@ A summary of the access policies in place can be found in the table below.
 | Jump Box           | No                  | 45.26.149.89         |
 | JumpToVNet         | No                  | 10.1.0.6             |
 | HomeToVNet         | No                  | 45.26.149.89         |
-| SSHtoELKVM         | NO                  | Any                  |
+| SSHtoELKVM         | No                  | Any                  |
 | AllowPort5601toELK | No                  | 45.26.149.89         | 
