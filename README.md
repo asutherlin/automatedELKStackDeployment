@@ -32,9 +32,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 
 ["Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash."](https://www.elastic.co/guide/en/beats/metricbeat/7.14/metricbeat-overview.html#:~:text=Metricbeat%20takes%20the%20metrics%20and,HAProxy)
 
-<!-- The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_. -->
-
 | Name     | Function | IP Address       | Operating System |
 |----------|----------|------------------|------------------|
 | Jump Box | Gateway  | Client IP        | Linux            |
@@ -51,7 +48,7 @@ Only the Jump Box Provisioner machine can accept connections from the Internet. 
 
 Machines within the network can only be accessed by the DVWA Docker Container. 
 - [install-dvwa.yml](dvwa-playbook.yml)
-<!-- - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_ -->
+
 The Jump Box Provisioner's IP is the only machine allowed to access the ELKvm: _40.83.166.154_
 
 A summary of the access policies in place can be found in the table below.
@@ -66,14 +63,65 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-<!-- _TODO: What is the main advantage of automating configuration with Ansible?_ -->
-- 
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because the process entire becomes streamlined from start to install all on it's own. 
 
+- [install-elk.yml](Diagrams/install-elk.yml)
+
+```
+---
+- name: Configure Elk VM with Docker
+  hosts: elk
+  remote_user: azadmin
+  become: true
+  tasks:
+    - name: Install docker.io
+      apt:
+        update_cache: yes
+        force_apt_get: yes
+        name: docker.io
+        state: present
+
+    - name: Install python3-pip
+      apt:
+        force_apt_get: yes
+        name: python3-pip
+        state: present
+
+    - name: Install Docker module
+      pip:
+        name: docker
+        state: present
+
+    - name: Increase virtual memory
+      command: sysctl -w vm.max_map_count=262144
+
+    - name: Use more memory
+      sysctl:
+        name: vm.max_map_count
+        value: 262144
+        state: present
+        reload: yes
+
+    - name: download and launch a docker elk container
+      docker_container:
+        name: elk
+        image: sebp/elk:761
+        state: started
+        restart_policy: always
+        published_ports:
+          -  5601:5601
+          -  9200:9200
+          -  5044:5044
+
+    - name: Enable service docker on boot
+      systemd:
+        name: docker
+        enabled: yes
+```
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- 
+- 
+- 
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
