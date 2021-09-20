@@ -119,9 +119,10 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
         enabled: yes
 ```
 The playbook implements the following tasks:
-- 
-- 
-- 
+- First is to install docker.io to create a container within the ELKvm.
+- Next, Python3 is installed so that the vm has a way to run the Kibana/Elastic scripts for Metricbeat and Filebeat.
+- Increase the virtual memory of the vm to 262,144bytes
+- Download the docker_containter image for ELK stack: _sebp/elk:761_ and always start/restart on boot.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
