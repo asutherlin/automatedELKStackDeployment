@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook files may be used to install only certain pieces of it, such as Filebeat.
 
-  - [install-elk.yml](install-elk.yml)
+  - Example playbook: [install-elk.yml](install-elk.yml)
 
 This document contains the following details:
 - Description of the Topology
@@ -37,7 +37,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name     | Function | IP Address       | Operating System |
 |----------|----------|------------------|------------------|
-| Jump Box | Gateway  | 40.83.166.154    | Linux            |
+| Jump Box | Gateway  | Client IP        | Linux            |
 | Web-1    | Host     | 10.1.0.8         | Linux            |
 | Web-2    | Host     | 10.1.0.9         | Linux            |
 | ELKvm    | ELK Host | 10.1.0.6         | Linux            |
@@ -58,7 +58,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name               | Publicly Accessible | Allowed IP Addresses |
 |--------------------|---------------------|----------------------|
-| Jump Box           | No                  | 45.26.149.89         |
+| Jump Box           | No                  | Client IP            |
 | JumpToVNet         | No                  | 10.1.0.6             |
 | HomeToVNet         | No                  | 45.26.149.89         |
 | SSHtoELKVM         | No                  | Any                  |
