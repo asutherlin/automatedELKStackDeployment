@@ -60,6 +60,6 @@ A summary of the access policies in place can be found in the table below.
 |--------------------|---------------------|----------------------|
 | Jump Box           | No                  | Client IP            |
 | JumpToVNet         | No                  | 10.1.0.6             |
-| HomeToVNet         | No                  | 45.26.149.89         |
+| HomeToVNet         | No                  | Client IP            |
 | SSHtoELKVM         | No                  | Any                  |
-| AllowPort5601toELK | No                  | 45.26.149.89         | 
+| AllowPort5601toELK | No                  | Client IP            | 
